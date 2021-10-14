@@ -22,13 +22,19 @@ function getRandomNumber(){
 // Capture user speech
 function onSpeak(e) {
     const msg = e.results[0][0].transcript
-    writeMsg()
-    checkNumber()
+    writeMsg(msg)
+    //checkNumber(msg)
 }
 
-function writeMsg(){}
+// Write what user speaks to the DOM
+function writeMsg(msg){
+    msgEl.innerHTML = `
+    <div>You Said: </div>
+    <span class = "box">${msg}</span>
+    `
+}
 
-function checkNumber()
+//function checkNumber() {}
 
 
 // Event Listners

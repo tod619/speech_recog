@@ -33,3 +33,16 @@ p {
   cursor: pointer;
   margin-top: 10px;
 }
+
+.msg {
+  font-size: 1.5em;
+  margin-top: 40px;
+}
+
+.box {
+  border: 1px solid #dedede;
+  display: inline-block;
+  font-size: 30px;
+  margin: 20px;
+  padding: 10px;
+}

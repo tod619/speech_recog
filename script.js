@@ -42,6 +42,11 @@ function checkNumber(msg) {
         msgEl.innerHTML = `<div>That is not a vaild number</div>`
         return
     }
+
+    // Check if the number is in range 1 - 100
+    if(num > 100 || num < 1) {
+        msgEl.innerHTML = `<div>Number must be between 1 and 100</div>`
+    }
 }
 
 

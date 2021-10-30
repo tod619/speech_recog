@@ -57,9 +57,9 @@ function checkNumber(msg) {
         <button class="play-again" id="play-again">Play Again</button>
         `
     } else if(num > randomNum) {
-        msgEl.innerHTML = `<div>Go Lower</div>`
+        msgEl.innerHTML += `<div>Go Lower</div>`
     } else {
-        msgEl.innerHTML = `<div>Go Higher</div>`
+        msgEl.innerHTML += `<div>Go Higher</div>`
     }
 }
 

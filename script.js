@@ -45,7 +45,21 @@ function checkNumber(msg) {
 
     // Check if the number is in range 1 - 100
     if(num > 100 || num < 1) {
-        msgEl.innerHTML = `<div>Number must be between 1 and 100</div>`
+        msgEl.innerHTML += `<div>Number must be between 1 and 100</div>`
+        return
+    }
+
+    // check the number against the random number
+    if(num === randomNum) {
+        document.body.innerHTML = `
+        <h2>You have guessed the correct number! <br><br>
+        It was ${num}</h2>
+        <button class="play-again" id="play-again">Play Again</button>
+        `
+    } else if(num > randomNum) {
+        msgEl.innerHTML = `<div>Go Lower</div>`
+    } else {
+        msgEl.innerHTML = `<div>Go Higher</div>`
     }
 }
 

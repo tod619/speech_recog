@@ -39,7 +39,7 @@ function checkNumber(msg) {
 
     // check if it is a valid number
     if(Number.isNaN(num)) {
-        msgEl.innerHTML = `<div>That is not a vaild number</div>`
+        msgEl.innerHTML += `<div>That is not a vaild number</div>`
         return
     }
 
@@ -67,3 +67,12 @@ function checkNumber(msg) {
 // Event Listners
 // Speek result event
 recognition.addEventListener('result', onSpeak)
+
+// End sr service
+recognition.addEventListener('end', () => recognition.start())
+
+document.body.addEventListener('click', (e)=> {
+    if(e.target.id === "play-again") {
+        window.location.reload()
+    }
+})

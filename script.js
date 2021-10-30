@@ -23,7 +23,7 @@ function getRandomNumber(){
 function onSpeak(e) {
     const msg = e.results[0][0].transcript
     writeMsg(msg)
-    //checkNumber(msg)
+    checkNumber(msg)
 }
 
 // Write what user speaks to the DOM
@@ -34,7 +34,15 @@ function writeMsg(msg){
     `
 }
 
-//function checkNumber() {}
+function checkNumber(msg) {
+    const num = +msg
+
+    // check if it is a valid number
+    if(Number.isNaN(num)) {
+        msgEl.innerHTML = `<div>That is not a vaild number</div>`
+        return
+    }
+}
 
 
 // Event Listners
